@@ -60,18 +60,17 @@ Each sample is a short news headline + category label.
   - Simple utilities for measuring performance: accuracy_score, confusion_matrix
   - Great for reporting results in a standardized way
  
-## 🔄 How Everything Fits Together
-
-The entire flow of data and transformations in the model is structured as follows:
+## How Everything Fits Together
 
 ```mermaid
 flowchart TD
     A[AG_NEWS Dataset] --> B[DistilBertTokenizer]
-    B --> C[DistilBERT (frozen)]
+    B --> C[DistilBERT frozen]
     C --> D[NdLinear Layer]
     D --> E[AdaptiveAvgPool1D]
-    E --> F[Linear Layer (256 → 4)]
+    E --> F[Linear Layer: 256 to 4]
     F --> G[Predicted News Category]
+
 ```
 
 ## Acknowledgments
