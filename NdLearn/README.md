@@ -65,10 +65,10 @@ Each sample is a short news headline + category label.
 ```mermaid
 flowchart TD
     A[AG_NEWS Dataset] --> B[DistilBertTokenizer]
-    B --> C[DistilBERT frozen]
+    B --> C[DistilBERT]
     C --> D[NdLinear Layer]
     D --> E[AdaptiveAvgPool1D]
-    E --> F[Linear Layer: 256 to 4]
+    E --> F[Linear Layer]
     F --> G[Predicted News Category]
 
 ```
